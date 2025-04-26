@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="username-screen" id="username-screen">
+        <div class="username-container">
+            <h2>Welcome to Penguin Chat!</h2>
+            <input type="text" id="username-input" placeholder="Enter your username" maxlength="15">
+            <button id="start-button">Start Chatting</button>
+        </div>
+    </div>
+    <div class="game-world" id="game-world" style="display: none;">
+        <div class="penguin" id="player">
+            <div class="chat-bubble" id="chat-bubble"></div>
+            <div class="username-label" id="username-label"></div>
+        </div>
+    </div>
+    <div class="chat-input-container">
+        <input type="text" id="message-input" placeholder="Type a message...">
+        <button id="send-button">Send</button>
+    </div>
+    <div class="color-menu" id="color-menu">
+        <h3>Choose Penguin Color</h3>
+        <div class="color-options">
+            <div class="color-option" data-color="#000000" style="background-color: #000000;"></div>
+            <div class="color-option" data-color="#FF0000" style="background-color: #FF0000;"></div>
+            <div class="color-option" data-color="#00FF00" style="background-color: #00FF00;"></div>
+            <div class="color-option" data-color="#0000FF" style="background-color: #0000FF;"></div>
+            <div class="color-option" data-color="#FFFF00" style="background-color: #FFFF00;"></div>
+            <div class="color-option" data-color="#FF00FF" style="background-color: #FF00FF;"></div>
+        </div>
+        <button id="close-menu">Close</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
